@@ -12,9 +12,10 @@ body {
 }
 
 /* header영역 */
+
 /* 공통 헤더 */
 .app-header-container {
-  background: pink;
+  background: #ffffff;
 }
 
 .app-header {
@@ -24,14 +25,27 @@ body {
   align-items: center;
 }
 
+/* 공통 로고 */
+.brand {
+  width: 176px;
+  padding: 18px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.brand a {
+  display: block;
+}
+
 @media all and (max-width: 767px) {
   /* 모바일 헤더 */
+  
   /* 햄버거 메뉴 */
   .is-open-menu {
     width: 50px;
     height: 50px;
     background-color: transparent;
-    padding: 0;
+    padding: 18px 16px;
   }
 
   .is-open-menu .ir {
@@ -40,18 +54,58 @@ body {
     height: 100%;
     background: url(./../images/button-navigation.svg) no-repeat 50% 50%;
   }
+
   /* 모바일 네비게이션 */
   .app-navigation {
-    display: none;
-    background-color: lightgreen;
+    transform: translate(105vw);
+    /* display: none; */
+    background: hsla(225, 57%, 10%, 0.9);
+    color: #fefefe;
+    backdrop-filter: blur(5px);
     position: fixed;
     /* left와 right를 모두 다 0을 주면 양쪽으로 요소가 늘어난다. */
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
+    padding-top: 66px;
+    transition: all 0.2s;
   }
-}
+
+  .app-navigation li {
+    border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+  }
+
+  .app-navigation li:last-child {
+    border-bottom: 0;
+  }
+
+  .app-navigation a {
+    display: block;
+    padding: 12px 22px;
+    transition: all 0.4s ease;
+  }
+
+  .app-navigation a:hover,
+  .app-navigation a:focus {
+    background: #2e437c;
+  }
+
+  .is--active .app-navigation {
+    transform: none;
+  }
+
+  .is-close-menu {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: #fefefe;
+    font-size: 2rem;
+  }
+} /*모바일 media영역*/
 
 @media all and (min-width: 768px) {
   /* 데스크탑 헤더 */
@@ -62,7 +116,6 @@ body {
   }
 
   .app-header {
-    background: yellow;
     width: 768px;
   }
   .is-open-menu, .is-close.menu {
@@ -73,4 +126,9 @@ body {
     display: flex;
     flex-flow: row nowrap;
   }
-}
+
+  .app-navigation li {
+    margin-left: 8px;
+    color: #24388d
+  }
+} /*데스크탑 media영역*/
