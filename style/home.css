@@ -65,10 +65,193 @@
   border: 1px solid currentColor;
 }
 
+/* 유튜브 영상 section */
+
+.ediya-youtube {
+}
+
+/* .ediya-youtube-wrapper {
+  margin: 0;
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0;
+  position: relative;
+} */
+
+.iframe-wrapper {
+  margin: 0;
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0;
+  position: relative;
+}
+
+.iframe4-3 {
+  padding-top: 75%;
+}
+
+.iframe16-9 {
+  padding-top: 56.25%;
+}
+
+.ediya-youtube-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ediya-notice {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.ediya-notice-headline,
+.ediya-notice__article {
+  padding: 15px;
+}
+
+.ediya-notice-headline {
+  width: 125px;
+  flex-shrink: 0;
+  background: var(--theme-primary) linear-gradient(137deg, var(--color-gradient-start) 5%, var(--color-gradient-end) 100%);
+  color: var(--theme-bright);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+}
+.ediya-notice__article {
+  flex-grow: 1;
+}
+
+.ediya-notice__article-headline {
+  margin: 0 0 5px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--theme-primary);
+}
+
+.ediya-notice__article-date {
+  font-size: 1.2rem;
+  color: var(--theme-disable);
+}
+
+.ediya-notice__article-text {
+  font-size: 1.3rem;
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.ediya-notice .button-container{
+  position: absolute;
+  left: 84px;
+  bottom: 10px;
+}
+.ediya-notice .button {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* 내가짠거 */
+/* .ediya-notice {
+  display: flex;
+  position: relative;
+}
+
+.ediya-notice-headline {
+  background: linear-gradient(137deg, #263D83 5%, #102457 100%);
+  padding: 15px;
+  width: 125px;
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--theme-bright);
+}
+
+.ediya-notice__article {
+  width: 100%;
+  padding: 15px;
+}
+
+.ediya-notice__article-headline {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--theme-primary);
+}
+
+.ediya-notice__article-date {
+  font-size: 1.2rem;
+  color: #878787;
+}
+
+.ediya-notice__article-text {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+}
+
+.button-container button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+} */
+
+/* 이디야 뉴스 section */
+.ediya-news {
+  background: var(--theme-primary);
+  color: var(--theme-bright);
+  padding: 15px;
+  position: relative;
+}
+
+.ediya-news-headline {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.ediya-news-list {
+  margin: 15px 0 0;
+}
+
+.ediya-news-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.ediya-news-subject {
+  width: 72.5%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1.4rem;
+}
+
+.ediya-news-date {
+  font-size: 1.4rem;
+}
+
+.ediya-news .icon-more {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+
+
+
 @media all and (max-width: 767px) {
   /* 모바일 추천 음료 */
   .ediya-recommend-container {
-    padding-bottom: 195px;
+    padding-bottom: 265px;
   }
   .ediya-recommend {
     padding: 25px 0 20px;
@@ -92,6 +275,8 @@
     width: 60%;
     transform: translateX(-60%);
   }
+
+  
   
 }
 
@@ -128,5 +313,36 @@
     width: 457px;
     top: -55px;
     right: -160px;
+  }
+
+  .ediya-section-container {
+    display: flex;
+    margin: auto;
+    width: 768px;
+  }
+
+  .ediya-youtube {
+    width: 365px;
+  }
+
+  .iframe-wrapper {
+    margin: 0;
+    width: 100%;
+    padding-top: 56.25%;
+    height: 0;
+    position: relative;
+  }
+
+  .ediya-inform-container {
+    width: 403px;
+  }
+
+  .ediya-news-list {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .ediya-news-date {
+    flex-grow: 1;
   }
 }
