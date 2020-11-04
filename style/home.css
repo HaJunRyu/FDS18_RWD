@@ -272,8 +272,7 @@
     position: absolute;
     top: 15px;
     left: 50%;
-    width: 60%;
-    transform: translateX(-60%);
+    /* transform: translateX(-60%); */
   }
 
   
