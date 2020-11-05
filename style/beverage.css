@@ -1,0 +1,226 @@
+/* 음료메뉴 메인영역 */
+
+/* 공통 코드 */
+
+/* 공통 음료 목록 */
+.ediya-menu {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* 공통 음료 아이템 */
+.ediya-menu__item {
+  position: relative;
+  width: 100%;
+  background-color: var(--theme-bright2);
+  margin-top: 20px;
+  height: 400px;
+}
+
+.ediya-menu__item:first-child {
+  margin-top: 0;
+}
+
+.ediya-menu [role="button"] {
+  display: block;
+}
+
+.ediya-menu__item figure {
+  margin: 0;
+  padding: 20px 0 40px;
+  text-align: center;
+}
+
+.ediya-menu__item img {
+  /* 원본 크기를 줄임 */
+  transform: scale(0.85);
+  transition: all 300ms;
+}
+
+.ediya-menu [role="button"]:hover img {
+  transform: scale(1);
+}
+
+
+/* .ediya-menu__item {
+  background: #ccc;
+  width: 100%;
+  margin: 10px;
+  padding: 15px;
+}
+
+.ediya-menu__item figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+} */
+
+/* 공통 음료 상세 정보 강사님꺼 */
+.ediya-menu__item--detail {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--theme-dark);
+  padding: 40px 20px;
+}
+
+.ediya-menu__item--name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--theme-dark);
+}
+
+.ediya-menu__item--name span[lang="en"] {
+  display: block;
+  color: var(--theme-disable);
+  font-size: 1.4rem;
+}
+
+.ediya-menu__item--multi-column {
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0;
+  column-count: 2;
+  column-rule: 1px solid var(--theme-dark);
+  padding: 10px 0;
+}
+
+.ediya-menu__item--multi-column dl {
+  margin-top: 0;
+  padding-bottom: 15px;
+}
+
+.ediya-menu__item--multi-column dt, 
+.ediya-menu__item--multi-column dd {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.3rem;
+  text-indent: 20px;
+  margin-top: 15px;
+}
+
+.ediya-menu__item--multi-column dd {
+  margin-left: 0;
+}
+
+.ediya-menu__item--detail .is-close-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+
+/* 공토 ㅇ음료 상세 정보 내꺼 */
+/* .ediya-menu__item--detail {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.ediya-menu__item--name {
+  margin: 0;
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.ediya-menu__item--name span[lang="en"] {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.ediya-menu__item--detail p {
+  font-size: 1.4rem;
+}
+
+.ediya-menu__item--multi-column{
+  padding: 15px 0;
+  background: var(--theme-bright2);
+  column-count: 2;
+  column-rule: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ediya-menu__item--multi-column dl {
+  margin: 0;
+  padding-left: 25%;
+}
+
+.ediya-menu__item--multi-column dt,
+.ediya-menu__item--multi-column dd {
+  line-height: 1.4;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ediya-menu__item--detail .button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+} */
+
+/* 모바일 코드 */
+
+/* 데스크탑 코드 */
+@media all and (min-width:768px) {
+
+  .ediya-menu {
+    width: 740px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .ediya-menu__item {
+    width: 360px;
+
+  }
+
+  .ediya-menu__item:first-child,
+  .ediya-menu__item:nth-child(2) {
+    margin-top: 0;
+  }
+
+  /* .beverage {
+    width: 768px;
+  }
+
+  
+
+  .ediya-menu__item {
+    width: 350px;
+    margin: 10px;
+  } */
+}
